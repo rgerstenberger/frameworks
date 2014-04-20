@@ -1,0 +1,15 @@
+<h2>Contacts <button class="js-add-person">Create Contact</button></h2>
+<ul>
+  {{#each collection.models}}
+    <li>
+      {{#with this.attributes}}
+        <h2>{{firstName}} {{lastName}}</h2>
+        <p>{{phone}}</p>
+        <img src="{{photoThumbnail}}">
+        <button class="js-delete-person" data-model-id="{{id}}" type=button>delete</button>
+      {{/with}}
+    </li>
+  {{/each}}
+</ul>
+
+{{view personFormView}}

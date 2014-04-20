@@ -2,8 +2,9 @@ require([
   'jquery',
   'backbone',
   'views/root',
+  'routers/contacts',
   'helpers'
-], function ($, Backbone, RootView) {
+], function ($, Backbone, RootView, ContactsRouter) {
   $(function() {
     Backbone.history.start({
       pushState: false,
@@ -17,7 +18,7 @@ require([
     RootView.getInstance(document.body);
 
     // Initialize your routers here
-    
+    var contactsRouter = new ContactsRouter();
 
     // This will trigger your routers to start
     Backbone.history.loadUrl();
