@@ -1,0 +1,19 @@
+<form {{action "create" controller "person" "/" on="submit"}} style="float:right;">
+  <p>
+    <label>First Name:</label><br/>
+    {{input value=firstName}}
+  </p>
+  <p>
+    <label>Last Name:</label><br/>
+    {{input value=lastName}}
+  </p>
+  <p>
+    <label>Phone:</label><br/>
+    {{input value=phone}}
+  </p>
+  <p style="text-align:right;">
+    <input type="submit">
+    {{#link-to 'contacts'}}Cancel{{/link-to}}
+  </p>
+</form>
+

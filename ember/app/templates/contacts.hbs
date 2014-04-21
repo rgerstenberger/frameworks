@@ -1,0 +1,22 @@
+<div style="float:left;">
+  <p>{{#link-to 'contacts.new'}}Create New Contact{{/link-to}}</p>
+
+  <ul>
+    {{#each}}
+      <li>
+        <h2>
+          {{#link-to 'contact' id}}{{firstName}} {{lastName}}{{/link-to}}
+        </h2>
+        {{partial "contact/contact"}}
+        <p>
+          <img {{bind-attr src="photoThumbnail"}}/>
+        </p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+
+<div style="float: right;">
+  {{outlet}}
+</div>
